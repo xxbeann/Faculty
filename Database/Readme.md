@@ -8,6 +8,7 @@
 > **데이터베이스 for Beginner(우재남)_한빛아카데미**
 * CH9 테이블과 뷰
 * CH10 인덱스
+* CH12 전체 텍스트 검색과 파티션
 
 
 > **Drugban XML data Parsing**
