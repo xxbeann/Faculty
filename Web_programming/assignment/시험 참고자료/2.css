@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+
+table {
+    margin: auto auto;
+    border: 5px solid blue;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+}
+
+.number{
+    font-size: 50px;
+    font-family:'Segoe UI';
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.number:hover{
+    color:red;
+}
+
+button {
+    width: 150px;
+}
+
+div#msg {
+    font: italic 18px consolas, sans-serif;
+    margin-top: 10px;
+}

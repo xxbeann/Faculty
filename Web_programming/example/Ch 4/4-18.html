@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 꾸미기</title>
+    <style>
+        /* 태그 선택자를 이용할경우 그 내용이 겹쳤을 때는 덮어써진다.*/
+        div{
+            background-color: skyblue;
+            background-size: 100px 100px;
+            background-image: url(media/그대로-나가-등교.jpg);
+            background-repeat: repeat-y;
+            background-position: center center;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            color: blueviolet;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h3>div박스에 배경 꾸미기</h3>
+    <hr>
+    <div>SpongeBob is an over
+        sponge that annoys other characters.
+    </div>
+</body>
+</html>

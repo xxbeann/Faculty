@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>195397_유정빈</title>
+</head>
+<body>
+    <h3>난수 10개 생성</h3>
+    <script>
+        let number = new Array();
+        let odd = new Array(); // 홀수
+        let even = new Array(); // 짝수
+
+        // 배열에 난수 10개 담기
+        for(let i=0;i<10;i++){
+            let m = Math.random()*100;
+            let n = Math.floor(m);
+            number[i] = n;
+        }
+        // 배열돌며 난수 출력
+        document.write("<hr>")
+        for(let i=0;i<10;i++){
+            document.write(number[i] + " ");
+        }
+
+        // 배열 정렬 -> number 자체 변경
+        // let sorted = number.sort(); 후 sorted 출력해도 같은 결과
+        number.sort(function(a,b){
+            // 숫자 오름차순 정렬 주의
+            // 그냥 sort() 메소드는 유니코드 순서에 따라 값을 정렬하기에 오름차순과 같은 결과가 아님.
+            return a-b;
+        });
+        document.write("<hr>")
+        document.write("제일 큰 수는 " + number[9] +"<br>");
+        document.write("제일 작은 수는 " + number[0]);
+        document.write("<hr>")
+        for(let i=0;i<10;i++){
+            document.write(number[i] + " ");
+        }
+
+        // 홀수, 짝수 배열에 담기
+        for(let i=0;i<10;i++){
+            // 짝수 긁어오기
+            if (number[i] % 2 == 0) {
+                even.push(number[i]);
+            }
+            else { // 홀수 긁어오기
+                odd.push(number[i]);
+            }
+        }
+        // 홀수 출력
+        document.write("<hr>")
+        document.write("홀수" + "<br>");
+        for(let i = 0; i<odd.length; i++){
+            document.write(odd[i] + " ");
+        }
+        // 짝수 출력
+        document.write("<hr>")
+        document.write("짝수" + "<br>");
+        for(let i = 0; i<even.length; i++){
+            document.write(even[i] + " ");
+        }
+    </script>
+</body>
+</html>

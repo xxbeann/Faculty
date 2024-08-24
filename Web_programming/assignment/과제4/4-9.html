@@ -1,0 +1,59 @@
+<!-- 문제 9, 10, 11에 대한 내용이 담겨있습니다. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>195397_유정빈</title>
+    <script>
+        let book1 = new Object(); 
+        // 이름이 book1인 객체 new Object()로 생성
+        book1.title = "죽고 싶지만 떡볶이는 먹고 싶어"; // 프로퍼티 생성 및 초기화
+        book1.author = "백세희";
+        book1.price = 13000;
+        book1.publisher = "흔";
+
+        let book2 = {
+            // 이름이 book2인 객체 리터럴 표기법으로 생성
+            // 프로퍼티 생성 및 초기화
+            title : "보노보노처럼 살다니 다행이야",
+            author: "김신회",
+            price: 14400,
+            publisher: "놀"
+        }
+
+        function book(title,author,price,publisher){
+            // 이름이 book인 객체 프로토타입으로 생성
+            this.title = title;
+            this.author = author;
+            this.price = price;
+            this.publisher = publisher;
+        }
+
+        // 프로토타입으로 book3 객체 생성
+        let book3 = new book("코스모스", "칼 에드워드 세이건", 18000, "사이언스 북스");
+
+        let books = [book1, book2, book3];
+        
+        // forEach 메소드 활용해 배열을 순회하며 콜백함수 실행
+        function write() {
+            let i = 1;
+            books.forEach(elem => {
+            document.write("<hr>");
+            document.write("book"+i+"&nbsp출력 <br>");
+            document.write(`도서명 : ${elem.title}<br>`);
+            document.write(`저자명 : ${elem.author}<br>`);
+            document.write(`가격 : ${elem.price}<br>`);
+            document.write(`출판사명 : ${elem.publisher}<br>`);
+            i++;
+        })
+        }
+    </script>
+</head>
+<body>
+    <h3>book 객체 만들기</h3>
+    <script>
+        write();
+    </script>
+</body>
+</html>

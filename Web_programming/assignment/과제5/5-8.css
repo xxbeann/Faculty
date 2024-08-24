@@ -1,0 +1,352 @@
+/* hover */
+#C:hover{
+    background-color: black;
+}
+#N:hover{
+    background-color: black;
+}
+#percent:hover{
+    background-color: black;
+}
+#slash:hover{
+    background-color: black;
+}
+#seven:hover{
+    background-color: black;
+}
+#eight:hover{
+    background-color: black;
+}
+#nine:hover{
+    background-color: black;
+}
+#multiple:hover{
+    background-color: black;
+}
+#four:hover{
+    background-color: black;
+}
+#five:hover{
+    background-color: black;
+}
+#six:hover{
+    background-color: black;
+}
+#minus:hover{
+    background-color: black;
+}
+#three:hover{
+    background-color: black;
+}
+#two:hover{
+    background-color: black;
+}
+#one:hover{
+    background-color: black;
+}
+#plus:hover{
+    background-color: black;
+}
+#zero:hover{
+    background-color: black;
+}
+#point:hover{
+    background-color: black;
+}
+#equal:hover{
+    background-color: black;
+}
+/* 계산기 전체 틀*/
+#frame{
+    background-color: black;
+    display: inline-block;
+    position: relative;
+    width: 245px;
+    height: 420px;
+    border-radius: 15px;
+    padding: 0;
+}
+/* 파란색 출력 화면 */
+#display{
+    background-color: skyblue;
+    display: inline-block;
+    position: absolute;
+    width: 205px;
+    height: 100px;
+    border-radius: 20px;
+    padding-right: 20px;
+    left: 11px;
+    top: 12px;
+    font-size: 30px;
+    text-align: right;
+    line-height: 5;
+}
+/*숫자칸*/
+#C{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 120px;
+    left: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#N{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 120px;
+    left: 65px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#percent{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 120px;
+    left: 125px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#seven{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 180px;
+    left: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#eight{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 180px;
+    left: 65px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#nine{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 180px;
+    left: 125px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#six{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 240px;
+    left: 125px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#five{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 240px;
+    left: 65px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#four{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 240px;
+    left: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#three{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 300px;
+    left: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#two{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 300px;
+    left: 65px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#one{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 300px;
+    left: 125px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#zero{
+    background-color: rgb(134, 134, 134);
+    width: 95px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 360px;
+    left: 5px;
+    text-align: left;
+    padding-left: 15px;
+    line-height: 50px;
+    font-size: 23px;
+}
+#point{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 360px;
+    left: 125px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+/*연산자 */
+#slash{
+    background-color: rgb(255, 94, 0);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 120px;
+    left: 185px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#multiple{
+    background-color: rgb(255, 94, 0);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 180px;
+    left: 185px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#minus{
+    background-color: rgb(255, 94, 0);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 240px;
+    left: 185px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#plus{
+    background-color: rgb(255, 94, 0);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 300px;
+    left: 185px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}
+#equal{
+    background-color: rgb(134, 134, 134);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    top: 360px;
+    left: 185px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+}

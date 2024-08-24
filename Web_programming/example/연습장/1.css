@@ -1,0 +1,68 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 5px 5px 3px gray;
+}
+table{
+    margin: 10px;
+}
+td{
+    height: 35px;
+    width: 60px;
+    text-align: center;
+    border: 2px solid white;
+}
+a{
+    text-decoration: none;
+}
+#color{
+    background-color: skyblue;
+}
+#last{
+    background-color: brown;
+}
+#launch{
+    font-style: italic;
+    font-weight: bold;
+    color: brown;
+}
+#computer_structure{
+    background-color: olive;
+}
+#computer_structure:hover{
+    background-color: aliceblue;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+}
+#data_structure{
+    background-color: orange;
+}
+#data_structure:hover{
+    background-color: aliceblue;
+}
+#web_programming{
+    background-color: palevioletred;
+}
+#web_programming:hover{
+    background-color: aliceblue;
+}
+#database{
+    background-color: slateblue;
+}
+#database:hover{
+    background-color: aliceblue;
+}
+#operation_system{
+    background-color: salmon;
+}
+#operation_system:hover{
+    background-color: aliceblue;
+}

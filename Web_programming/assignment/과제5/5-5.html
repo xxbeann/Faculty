@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index 스타일 프로퍼티</title>
+    <style>
+        div {
+            position: absolute;
+        }
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h3>z-index</h3>
+    <hr>
+    <div>
+        <img src="./media/spade.png" width="100" height="140" alt="스페이드">
+        <img src="./media/heart.png" width="100" height="140" alt="하트">
+        <img src="./media/clover.jpeg" width="100" height="140" alt="클로버">
+        <img src="./media/dia.png" width="100" height="140" alt="다이아">
+    </div>
+    <script>
+        let list = document.getElementsByTagName("img");
+        // z-index값 지정
+        for(let i = 0; i<list.length;i++){
+            list[i].style.zIndex = i+1;
+        }
+        // 이미지 클릭 이벤트 리스너 추가
+        // 4장이 반복되는 구조이므로 처음 zindex값을 지정후
+        // 클릭하면 4칸뒤로 밀려나 맨뒤로 삽입되게 한다.
+        for(let img of list) {
+            img.addEventListener("click", function() {
+                this.style.zIndex -= 4;
+            });
+        }
+
+        // function remove() {
+        //     this.style.zIndex -= 4;
+        // }
+
+        // for(let img of list) {
+        //     img.onclick=remove;
+        // }
+
+    </script>
+</body>
+</html>

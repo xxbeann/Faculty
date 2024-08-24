@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index 프로퍼티</title>
+    <style>
+        div{
+            position: relative;
+        }
+        img{
+            position: absolute;
+        }
+        #spadeA{
+            z-index: 7;
+            left: 10px;
+            top: 20px;
+        }
+        #spade2{
+            z-index: 3;
+            left: 40px;
+            top: 30px;
+        }
+        #spade3{
+            z-index: 2;
+            left: 80px;
+            top: 40px;
+        }
+        #spade7{
+            z-index: -3;
+            left: 120px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h3>z-index 프로퍼티</h3>
+    <hr>
+    <div>
+        <img id="spadeA" src="../Ch 2/media/그치만-굴복해버림-학교.jpg" width="100" height="100">
+        <img id="spade2" src="../Ch 2/media/그치만-굴복해버림-학교.jpg" width="100" height="100">
+        <img id="spade3" src="../Ch 2/media/그치만-굴복해버림-학교.jpg" width="100" height="100">
+        <img id="spade7" src="../Ch 2/media/그치만-굴복해버림-학교.jpg" width="100" height="100">
+    </div>
+</body>
+</html>

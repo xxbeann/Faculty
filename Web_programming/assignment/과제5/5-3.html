@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 연습</title>
+    <script>
+        function b(){
+            let classes = document.getElementsByClassName("classsel");
+            for(let i = 0;i<classes.length;i++){
+                classes[i].style.color = 'red';
+            }
+        }
+        function a (){
+            let id1 = document.getElementById("idsel1");
+            let id2 = document.getElementById("idsel2");
+
+            id1.style.color = 'blue';
+            id1.style.fontWeight = 'bold';
+
+            id2.style.color = 'green';
+            id2.style.fontWeight = 'bold';
+        }
+    </script>
+</head>
+<body onload="b()">
+    <h3>프로그래밍 언어
+        <button onclick="a()">Color</button>
+    </h3>
+    <hr>
+    <p><span class="classsel">자바스크립트</span></p>
+    <p><span id="idsel1">C언어</span></p>
+    <p><span class="classsel">JAVA</span></p>
+    <p><span class="classsel">Python</span></p>
+    <p><span id="idsel2">C++</span></p>
+</body>
+</html>

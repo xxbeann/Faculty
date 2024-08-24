@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>195397_유정빈</title>
+</head>
+<body>
+    <h3>문자열 배열 다루기</h3>
+    <hr>
+    <script>
+        let champion = new Array("tahmkench", "teemo", "yummi", "tryndamere", "yasuo", "heimerdinger", "aurelionsol", "ahri", "aurelionsol", "aphelios");
+        let sorted = champion.slice(0).sort(); // 챔피언 배열 복사해서 정렬 -> 원본 배열 건드리지 않음.
+        let firstword = new Array();
+
+        // 가장 긴 문자열들과 가장 짧은 문자열들을 저장할 배열 초기화.
+        // 가장 짧거나 긴 문자열이 1개가 아닐 수 있기에.
+        let longest = [];
+        let shortest = [];
+
+        // 가장 긴 문자열과 가장 짧은 문자열의 초기 길이 설정
+        let longestLength = 0;
+        // 첫 번째 단어의 길이로 시작
+        let shortestLength = champion[0].length
+
+        // 배열을 순회하며 각 단어의 길이 확인
+        champion.forEach(elem => {
+            // champion 배열 element의 요소 길이
+            let elemLength = elem.length;
+            if(elemLength>longestLength){
+                // 현재 단어의 길이가 지금까지 발견된 가장 긴 길이보다 길면
+                // 가장 긴 단어의 길이를 현재 단어의 길이로 업데이트하고
+                // 가장 긴 문자열들을 저장하는 배열을 현재 단어만 포함하도록 재설정
+                longestLength = elemLength;
+                longest = [elem];
+            }
+            else if(elemLength == longestLength) {
+                // 현재 단어의 길이가 지금까지 발견된 가장 긴 길이와 같으면.
+                // 현재 단어를 가장 긴 문자열을 저장하는 배열에 추가.
+                longest.push(elem);
+            }
+
+            if(elemLength<shortestLength){
+                // 현재 단어의 길이가 지금까지 발견된 가장 짧은 길이보다 짧으면.
+                // 가장 짧은 길이를 현재 단어의 길이로 업데이트하고,
+                // 가장 짧은 문자열들을 저장하는 배열을 현재 단어만 포함하도록 재설정
+                shortestLength = elemLength;
+                shortest = [elem];
+            }
+            else if(elemLength == shortestLength){
+                // 현재 단어의 길이가 지금까지 발견된 가장 짧은 길이와 같으면
+                // 현재 단어를 가장 짧은 문자열들을 저장하는 배열에 추가.
+                shortest.push(elem);
+            }
+        })
+
+
+        document.write("이름 : ");
+        for(let i = 0 ; i<champion.length;i++){
+            document.write(champion[i] + " ");
+        }
+        document.write("<br>");
+        document.write("가장 짧은 이름 : " + shortest + "<br>");
+        document.write("가장 긴 이름 : " + longest + "<br>");
+        document.write("가장 먼저 나오는 이름 : " + sorted[0] + "<br>");
+        document.write("가장 나중에 나오는 이름 : " + sorted[9] + "<br>");
+        document.write("정렬 된 이름 : ");
+        for(let i = 0 ; i<sorted.length;i++){
+            document.write(sorted[i] + " ");
+        }
+        document.write("<hr>");
+        document.write("이름의 첫글자 별로 분류해서 출력");
+        document.write("<hr>");
+
+        // 정렬된 배열 순회하며 이름의 첫 글자 뽑아오기.
+        sorted.forEach(elem=>{
+            if (firstword.includes(elem[0])){
+                return;
+            }
+            else{
+                firstword.push(elem[0]);
+            }
+        })
+        
+        for(let i = 0 ;i<firstword.length;i++){
+            document.write("이름의 첫글자 : " + firstword[i] + "<br>");
+            // 정렬된 배열 순회하면서 이름의 첫 글자와 첫 글자가 저장된 배열 비교
+            // 만약 같다면 출력하거나 하고싶은 일 처리.
+            sorted.forEach(elem=>{
+                if(elem[0] == firstword[i]){
+                    document.write(elem + " ");
+                }
+            })
+            document.write("<hr>");
+        }
+    </script>
+</body>
+</html>

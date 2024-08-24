@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 삽입</title>
+</head>
+<body>
+    <h3>비디오 삽입</h3><hr>
+    <!--controls: 제어버튼 출력
+        autoplay: 자동 재생
+        loop: 반복재생
+        muted: 오디오를 끌 때 -->
+    <video src="media/cat.mp4" width="320" height="240" controls>
+        브라우저가 비디오 태그를 지원하지 않음
+    </video>
+    <video src="media/cat2.mp4" width="320" height="240" controls autoplay muted>
+        브라우저가 비디오 태그를 지원하지 않음
+    </video>
+    <!-- autoplay만 넣었을 경우 자동재생 안됨 -->
+    <video src="media/cat3.webm" width="320" height="240" controls autoplay>
+        브라우저가 비디오 태그를 지원하지 않음
+    </video>
+
+    <h3>오디오 삽입</h3><hr>
+    <audio src="media/audio1.mp3" controls></audio>
+    <audio src="media/audio2.wav" controls loop></audio>
+</body>
+</html>

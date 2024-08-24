@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비정형 표 만들기</title>
+</head>
+<body>
+    <h3>비정형 표 만들기</h3>
+    <hr>
+    <table border="1">
+        <caption>비정형 표</caption>
+        <thead>
+            <tr> <!-- tr 태그는 행과 관련됨//가로줄 colspan은 열을 2칸 차지한다.-->
+                <th colspan="2">지역별 홍차</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> <!-- 하나의 행을 만드는데 행을 3칸차지할 수 있는 행을 만들거야. 첫번째 값 동시에 입력-->
+                <td rowspan="3">중국</td>
+                <td>정산소종</td>
+            </tr>
+            <!-- 두개의 행을 추가해줌 -->
+            <tr><td>기문</td></tr>
+            <tr><td>운남</td></tr>
+            <tr> <!-- 하나의 행을 만드는데 행을 4칸차지할 수 있는 행을 만들거야. 첫번째 값 동시에 입력-->
+                <td rowspan="4">인도 및 스리랑카</td>
+                <td>아삼</td>
+            </tr>
+            <tr><td>실론</td></tr>
+            <tr><td>다질링</td></tr>
+            <tr><td>닐기리</td></tr>
+        </tbody>
+
+    </table>
+</body>
+</html>

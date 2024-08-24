@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>195397_유정빈</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>16개의 랜덤한 색 만들기</h3>
+    <hr>
+    <script>
+        // rgb값은 0부터 255까지 총 256개의 숫자 3쌍의 조합으로 이루어짐
+        let r = new Array();
+        let g = new Array();
+        let b = new Array();
+        for(let i = 0 ; i<=15; i++){
+            r.push(Math.floor(Math.random()*256));
+            g.push(Math.floor(Math.random()*256));
+            b.push(Math.floor(Math.random()*256));
+        }
+        for(let i = 0; i<r.length;i++){
+            document.write("<div style='background-color: rgb("+ r[i]+","+g[i]+","+b[i]+");'>rgb("+r[i]+","+g[i]+","+b[i]+")</div>");
+            if(i == 3 || i == 7 || i == 11){
+                document.write("<br>")
+            }
+        }
+        
+    </script>
+</body>
+</html>

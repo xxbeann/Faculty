@@ -1,0 +1,23 @@
+<!--
+체크박스는 중복이된다.
+value는 넘겨줄때 서버에서는 짜장면을 1로 처리한다. 짜장면 그대로 넘어가는 것이 아니라 value 값을 넘겨준다.
+checked속성이 사용되면 체크된 상태로 출력 but web에서 사용자 임의로 체크 해제 가능
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크 박스 만들기</title>
+</head>
+<body>
+    <h3>먹고 싶은 것 모두 체크하세요</h3>
+    <hr>
+    <form>
+        짜장면 <input type="checkbox" value="1">
+        짬뽕 <input type="checkbox" value="2" checked>
+        탕수육 <input type="checkbox" value="3">
+    </form>
+</body>
+</html>

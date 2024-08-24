@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes textColorAnimation{
+            0% {color: blue;}
+            30% {color: green;}
+            100% {color: red;}
+        }
+        span{
+            animation-name: textColorAnimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <p><span>span</span>텍스트를 5초에 무한반복</p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 무조건 프로토타입으로 쓴다고 좋은게 아니다.
+        // 객체가 여러개 생성될것 같다. -> 프로토타입
+        // 각 객체간의 포맷이 동일한가? -> 동일하지 않을경우 따로따로 리터럴로 만드는게 유리할 수도있다.
+        function Account(owner, code, balance){
+            this.owner = owner;
+            this.code = code;
+            this.balance = balance;
+
+            this.inquiry = function(){
+                return this.balance;
+            }
+            this.deoposit = function(money){
+                this.balance += money;
+            }
+            this.withdraw = function(money){
+                this.balance -= money;
+                return money;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>프로토타입으로 객체 만들기</h3>
+    <hr>
+    <script>
+        let account = new Account("황기태", "111", 35000);
+
+        document.write("account: ");
+        document.write(account.owner + ",");
+        document.write(account.code + ",");
+        document.write(account.balance + "<br>");
+
+        account.deoposit(10000);
+        document.write("10000원 저금 후 잔액은" + account.inquiry() + "<br>");
+        account.withdraw(5000);
+        document.write("5000원 인출 후 잔액은" + account.inquiry() + "<br>");
+    </script>
+</body>
+</html>

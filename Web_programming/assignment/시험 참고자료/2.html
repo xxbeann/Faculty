@@ -1,0 +1,27 @@
+<!-- 작년 기출 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>갬블링 게임</title>
+    <link rel="stylesheet" type="text/css" href="2.css">
+    <script src="2.js"></script>
+</head>
+
+<body onload="init()">
+    <h1>슬롯머신 게임</h1>
+    <hr>
+    <table>
+        <tr>
+            <td class="number" onclick = "stop(0)">1</td>
+            <td class="number" onclick = "stop(1)">2</td>
+            <td class="number" onclick = "stop(2)">3</td>
+        </tr>
+        <tr>
+            <td colspan="3"><button onclick="start()">Spin</button></td>
+        </tr>
+    </table>
+    <div id="msg"></div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>195397_유정빈</title>
+    <style>
+        /*h3_hovering*/
+        h3{
+            color: red;
+        }
+        h3:hover{
+            color: blue;
+        }
+        
+        #hovering{
+            /* relative를 추가하여 위치 상 부모 요소가 될 수 있게 해준다.
+            자식의 상위요소들에 모두 포지션이 없을 경우 뷰포트가 위치 상 부모가 된다.*/
+            position: relative;
+        }
+        #hovering > img{
+            /* 
+            배치 기준을 부모에서 찾는다
+            hovering id를 가진 부모에서 img태그 자식에만 적용한다. 
+            배치를 사용하여 이미지를 겹치게 만들어줌
+            */
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+        #hovering:hover > #change{
+            /* hovering id를 가진 부모에서 change id를 가진 자식에만 적용한다. */
+            /*display: none;*/
+            visibility: hidden;
+        }
+
+        /* 
+        javascript 이용해서 이미지 전환
+        #hovering_js{
+            width: 200px;
+            height: 200px;
+        }
+        */
+        
+    </style>
+</head>
+<body>
+    <h3>hover 실습</h3>
+    
+    <div id="hovering">
+        <img src="media/FT-내가-너무나-소중한-췌에.jpg" alt="내로남불" >
+        <img id="change" src="media/그치만-굴복해버림-학교.jpg" alt="학교">
+    </div>
+
+    <!--
+    javascript이용 html에서 이미지 전환
+    <div>
+        <img id="hovering_js" src="media/FT-내가-너무나-소중한-췌에.jpg" alt="내로남불"
+        onmouseover="this.src='media/그치만-굴복해버림-학교.jpg'"
+        onmouseout="this.src='media/FT-내가-너무나-소중한-췌에.jpg'">
+    </div>
+    -->
+
+</body>
+</html>

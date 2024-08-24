@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스에 그림자 만들기</title>
+    <style>
+        .blurBox{
+            box-shadow: 10px 10px 5px  skyblue; /*blur-radius: 블러처리 되는 정도 spread-radius: 블러가 퍼지는 길이*/
+        }
+        div{
+            width: 150px;
+            height: 70px;
+            padding: 10px;
+            border: 10px solid lightgray;
+            background-image: url(media/그대로-나가-등교.jpg);
+            background-size: 150px 100px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h3>박스 그림자 만들기</h3>
+    <hr>
+    <div class="blurBox">쿵야</div>
+</body>
+</html>

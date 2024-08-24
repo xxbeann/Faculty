@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합 선택자</title>
+    <style>
+        /* 복합 - 자식 선택자 ul > .orange 
+        선택자 ul의 자식 요소 .orange 선택
+        ul > .orange{
+            color: red;
+        } 
+        
+        복합 - 하위(후손) 선택자 div .orange
+        선택자 div의 하위요소 .orange 선택
+        띄어쓰기가 선택자의 기호
+        div #orange{    id 태그도 가능
+            color: red;
+        } */
+        div .orange{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+    <span class="orange">오렌지</span>
+</body>
+</html>

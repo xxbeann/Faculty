@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline-block-center {
+          text-align: center; /* inline요소만 적용됨 */
+        }
+        .inline-block-center div {
+          display: inline-block; /* block요소인 div를 inline으로 만들어준다. */
+          width: 200px;
+      
+          text-align: left; /* 안의 내용 글자 정렬 */
+        }
+      </style>
+</head>
+<body>
+    <main class="inline-block-center">
+        <div> I'm an element that is block-like with my siblings and we're centered in a row. </div>
+        <div> I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my siblings do. </div>
+        <div> I'm an element that is block-like with my siblings and we're centered in a row.
+        </div>
+      </main>
+</body>
+</html>

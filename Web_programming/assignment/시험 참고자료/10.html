@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>눈 내리는 사걀의 마을</title>
+<style>
+body {
+	background-image : url("media/snow.jpg");
+	background-size : 100%;
+	background-repeat : no-repeat;
+}
+div.snow {
+	position : absolute;
+	font-size : 40px;
+	color : white;
+	padding : 0px;
+	margin : 0px;
+}
+</style>
+<script>
+const SNOWS = 30;
+const snow = new Array(SNOWS);					// 눈송이 30개에 대한 배열
+const x = new Array(SNOWS);						// 눈송이 각각의 x좌표
+const y = new Array(SNOWS);						// 눈송이 각각의 y좌표
+const speedOfFall = new Array(SNOWS);          // 눈송이의 낙하하는 속도
+const speedOfwind = new Array(SNOWS);          // 떨어지며 풍속의 영향을 받는 정도
+const step = new Array(SNOWS);                 // 풍속영향력의 변화도
+
+function fall() {
+	for(let i=0; i<SNOWS; i++){
+		y[i] += speedOfFall[i]              //눈송이의 다음 y좌표
+		x[i] += Math.cos(speedOfwind[i]);  	//눈송이의 다음 x좌표, 코사인함수곡선을 이용
+		if(y[i] >= window.innerHeight-60) {  //땅에 닿은 눈송이에 대해 새로운 눈송이를 생성
+			x[i] = Math.floor(Math.random()*window.innerWidth);      
+			y[i] = 0;
+			speedOfFall[i] = Math.random()*2+2;               
+		}
+
+		if(x[i] >= window.innerWidth-50) x[i] = window.innerWidth - 50;  //브라우저의 크기를 넘어가는 눈송이에 대한 처리
+		else if(x[i] < 0) x[i] = 50;
+		
+		snow[i].style.top = y[i] + "px";     
+		snow[i].style.left = x[i] + "px";
+
+		speedOfwind[i] += step[i]; 
+	}
+	setTimeout("fall()",50);
+}
+
+// SNOWS 개의 눈송이를 생성하여 도큐먼트에 부착
+function makeSnow() {
+	for(let i=0; i<SNOWS; i++) { // SNOWS 개의 눈송이 생성
+		// <div id="snowobj012...">*</div> 생성
+		let divtag = "<div class='snow' id=snowobj" + i + ">*</div>";
+		document.write(divtag);
+		
+		// <div> DOM 객체 기억
+		snow[i] = document.getElementById("snowobj"+i)
+	}
+}
+
+// SNOWS 개의 눈송이의 초기 위치 설정. 이 작업은 윈도우의 크기가 결정된 뒤에 이루어져야 함
+function initSnowPosition() {
+	// window.innerHeight는 현재 윈도우의 브라우저 영역의 높이
+	// window.innerWidth는 현재 윈도우의 브라우저 영역의 폭
+	
+	for(let i=0; i<SNOWS; i++) { // 30 개의 눈송이 생성
+		x[i] = Math.floor(Math.random()*window.innerWidth-10);       //눈송이의 x좌표 지정
+		y[i] = Math.floor(Math.random()*window.innerHeight+10); 	//최초 눈송이의 y좌표 지정
+		speedOfFall[i] = Math.random()*2+2;               //눈송이의 낙하속도 지정
+		speedOfwind[i] = 1;                               //최초 바람의 영향
+		step[i] = Math.random()*0.1+0.05;                 // 눈송이가 받는 바람의 영향의 변화도
+
+		snow[i].style.top = x[i] + "px";	// 눈의 위치 초기화
+		snow[i].style.left = y[i] + "px";	// 눈의 위치 초기화
+	}
+}
+
+makeSnow(); // 문서가 로딩되는 단계에서 눈(*) 모양의 <div> 객체들을 생성하여 도큐먼트에 삽입		
+
+window.onload = function () {
+	initSnowPosition(); // 눈송이의 위치 초기화
+	fall(); // 눈송이 떨어지는 것 연출
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

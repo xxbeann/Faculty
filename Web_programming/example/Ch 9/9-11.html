@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background: skyblue;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h3>마우스 이벤트 객체의 프로퍼티와 onmouseover</h3>
+    <hr>
+    이미지 위에 마우스를 움직일 때 onmouseover리스너가 실행되고 마우스의 위치를 보여줌.
+    <br><br>
+    <img src="../Ch 2/media/그치만-굴복해버림-학교.jpg" width="200px" height="200px" onmousemove="where(event)">
+    <br><br>
+    <div id="div"></div>
+    <script>
+        let div = document.getElementById("div");
+        function where(e) {
+            let text = "버튼 =" + e.button + "<br>";
+            text += "(screenX, screenY)=" + e.screenX + "," + e.screenY + "<br>";
+	        text += "(clientX, clientY)=" + e.clientX + "," + e.clientY + "<br>";
+	        text += "(offsetX, offsetY)=" + e.offsetX + "," + e.offsetY + "<br>";
+	        text += "(x, y)=" + e.x + "," + e.y + "\n";
+	        div.innerHTML = text;
+        }
+
+
+    </script>
+</body>
+</html>

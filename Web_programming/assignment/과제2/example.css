@@ -1,0 +1,18 @@
+/*css 중첩 주의, 우선순위 잘 체크*/
+div{
+    background-color: rgb(128, 128, 128);
+    padding: 20px;
+}
+#shape1{
+    border-radius: 20px 0px 20px 0px;
+    background-color: rgb(255, 255, 0);
+    padding: 0px;
+    border: 10px inset yellow;
+}
+#shape2{
+    border-radius: 20px 0px 20px 0px;
+    background-color: palevioletred;
+    padding: 20px;
+    border: 10px outset yellow;
+    margin: 0px;
+}

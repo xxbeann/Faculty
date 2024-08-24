@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>195397_유정빈</title>
+</head>
+<body>
+    <h3>일주일의 계획표</h3>
+    <hr>
+    <script>
+        let day = prompt("월화수목금토일 중에서 입력하세요.");
+        document.write(day+"요일 일정<br>");
+        switch(day){
+            case "월": 
+                document.write("등교");
+                break;
+            case "화": 
+                document.write("등교<br>");
+                document.write("1교시 입니다.")
+                break;
+            case "수": 
+                document.write("등교");
+                break;
+            case "목": 
+                document.write("등교<br>");
+                document.write("1교시 입니다.")
+                break;
+            case "금":
+                document.write("신나는 회의");
+                break;
+            case "토":
+                document.write("휴식");
+                break;
+            case "일":
+                document.write("휴식");
+                break;
+            // 예외처리    
+            // default:
+            //     document.write("월화수목금토일 중 입력하세요.<br>");
+            //     document.write("입력예시: 월")
+        }
+    </script>
+</body>
+</html>

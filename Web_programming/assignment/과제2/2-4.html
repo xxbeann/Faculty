@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>195397_유정빈</title>
+    <style>
+        /*background와 background-color둘 다 배경 지정 가능
+        background는 배경과 관련된 여러가지 속성 지정 가능
+        background-color는 배경색만 지정 가능
+        명시성 측면에서는 각각의 옵션명을 적어주는 편이 코드 가독성이 높다.*/
+        h2::first-letter{
+            color: pink;
+        }
+        h3{
+            color: sandybrown;
+        }
+        .class_selector{
+            background-color: aqua;
+        }
+        #id_selector{
+            background-color: mediumpurple;
+            color: yellowgreen;
+        }
+        span > strong{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>셀럭터 실습</h2>
+    <h3>태그 이름 셀렉터</h3>
+    <span class="class_selector">class 셀렉터</span><br>
+    <span id="id_selector">id 셀렉터</span><br>
+    <span><strong>자식 셀렉터</strong></span><br>
+</body>
+</html>
