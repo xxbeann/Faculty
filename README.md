@@ -1,4 +1,4 @@
-### Chonnam National University Faculty_log
+### Chonnam National University Faculty
 ---
 * C프로그래밍기초및실습(2-1)
 * 고급프로그래밍및실습(C++)(2-2)
